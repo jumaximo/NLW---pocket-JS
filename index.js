@@ -1,5 +1,5 @@
 const { select, input, checkbox } = require('@inquirer/prompts')
-const fd = require("fs").promises
+const fs = require("fs").promises
 
 
 let mensagem = "Bem vindo ao app de metas";
@@ -94,7 +94,7 @@ const metasAbertas = async () => {
     if(metas.length == 0){
         mensagem = "Não existem metas"
         return}
-        
+
     const abertas = metas.filter((meta) => {
         return meta.checked != true 
     })
